@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">Library</string>
+
+    <string name="error_username">Username is required.</string>
+    <string name="required">Enter valid email or mobile number</string>
+    <string name="error_password">Invalid Password</string>
+
+    <string name="error_full_name">Full Name is required.</string>
+    <string name="error_first_name">First Name is required.</string>
+    <string name="error_last_name">Last Name is required.</string>
+    <string name="error_mobile_no">Mobile no should be 10 digits in length.</string>
+    <string name="error_land_line_no">LandLine no should be 9 digits in length.</string>
+    <string name="error_email">E-mail address should be valid.</string>
+    <string name="error_password_not_match">New password and confirm password do not match.</string>
+
+    <string name="error_bank">Bank should be provided</string>
+    <string name="error_branch">Branch should be provided</string>
+    <string name="error_accountname">Account name should be provided</string>
+    <string name="error_accountnumber">Account number should be provided</string>
+    <string name="error_desription">Description should be provided</string>
+
+
+    <string name="error_pin">Pin no should be 6 digits in length.</string>
+    <string name="error_empty">Required Field</string>
+    <string name="error_pin_not_match">New pin and confirm pin do not match.</string>
+    <string name="error_password_combination">Current password and new password are similar</string>
+    <string name="error_pin_combination">Old pin and new pin are similar</string>
+    <string name="error_code">Code must be 6 digits in length.</string>
+    <string name="error_description">Description must be provided.</string>
+    <string name="error_amount">Amount must be provided.</string>
+    <string name="error_purpose">Purpose must be provided.</string>
+    <string name="error_card_type">Card Type must be provided.</string>
+    <string name="error_card_no">Card No must be provide.</string>
+    <string name="error_product_id">Enter either NTC or nCell mobile to proceed.</string>
+    <string name="error_dob">Date of Birth must be provided.</string>
+    <string name="error_date">Date must be valid.</string>
+    <string name="error_expiry_issue">Issue date can not be after expiry date.</string>
+    <string name="error_gender">Gender must be provided.</string>
+    <string name="error_occupation">Occupation must be provided.</string>
+    <string name="error_father_name">Father name must be provided.</string>
+    <string name="error_mother_name">Mother name should be provided.</string>
+    <string name="error_grand_father_name">Grand Father name must be provided.</string>
+    <string name="error_province">Province must be provided.</string>
+    <string name="error_district">District must be provided.</string>
+    <string name="error_connect_ips">Bank must be provided.</string>
+    <string name="error_connect_ips_branch">Branch must be provided.</string>
+    <string name="error_municipality">Municipalities must be provided.</string>
+    <string name="error_street">Street must be provided.</string>
+    <string name="error_ward_no">Ward no should be provided.</string>
+    <string name="error_doc_type">Document type must be provided.</string>
+    <string name="error_id_no">Document no must be provided.</string>
+    <string name="error_issued_district">Document Issued district must be provided.</string>
+    <string name="error_issued_date">Document issued date must be provided.</string>
+    <string name="error_expired_date">Invalid Document expired date .</string>
+    <string name="error_empty_path">"Required</string>
+    <string name="error_qr_code">Qr code is required</string>
+    <string name="merchant_name">Merchant name is required.</string>
+    <string name="merchant_code">Merchant Code is required</string>
+    <string name="merchant_payable_amount">Merchant payable amount is required</string>
+    <string name="merchant_payable_remarks">Merchant remarks is required</string>
+    <string name="error_remarks">Remarks is required.</string>
+    <string name="error_instrument">Instrument is required.</string>
+    <string name="error_nea_id">Provide Nea Subscriber No</string>
+    <string name="error_office_code">Provide Office code.</string>
+    <string name="error_customer_id">Provide customer id.</string>
+    <string name="error_service_charge">Provice service charge.</string>
+    <string name="vianet_customer_id">Provide customer id.</string>
+    <string name="error_plan_id">Provide plan id.</string>
+    <string name="error_subscribe">Enter subscriber no.</string>
+    <string name="wlink_customer_id">Provide WorldLink customer id.</string>
+    <string name="error_marital_status">Provide marital status.</string>
+    <string name="error_spouse_name">Provide Spouse name.</string>
+    <string name="error_product_id_">Product Id must be provided</string>
+    <string name="error_dishhome_id">Provide Dish,home ID</string>
+    <string name="error_mero_tv_id">Provide Mero TV Id.</string>
+    <string name="error_service_type">Provide service type.</string>
+    <string name="error_stb_id">Provide std id.</string>
+    <color name="pin_normal">#6B767E</color>
+    <color name="colorPrimary">#0259A6</color>
+
+    <string name="error_date_req">Date is required.</string>
+    <string name="error_contact_number">Invalid Mobile Number.</string>
+    <string name="error_contact_address">Contact Address is required.</string>
+    <string name="error_type_travelleer">Type Of Traveller is required.</string>
+
+</resources>
