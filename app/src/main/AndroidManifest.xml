@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Library">
         <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
             android:name=".lib.activities.MainActivity"
             android:exported="true" />
     </application>
