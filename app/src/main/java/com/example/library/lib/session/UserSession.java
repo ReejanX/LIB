@@ -1,21 +1,21 @@
-package moc.spn.sbil.lellaw.session;
+package com.example.library.lib.session;
+
+import static com.example.library.lib.utils.Constants.KEY_AGENT_ID;
+import static com.example.library.lib.utils.Constants.KEY_BALANCE;
+import static com.example.library.lib.utils.Constants.KEY_COMMISSION;
+import static com.example.library.lib.utils.Constants.KEY_EMAIL_ID;
+import static com.example.library.lib.utils.Constants.KEY_ID;
+import static com.example.library.lib.utils.Constants.KEY_KYC;
+import static com.example.library.lib.utils.Constants.KEY_LOGO;
+import static com.example.library.lib.utils.Constants.KEY_MOBILE;
+import static com.example.library.lib.utils.Constants.KEY_NAME;
+import static com.example.library.lib.utils.Constants.KEY_REWARD;
 
 import android.content.Context;
 
-import moc.spn.sbil.lellaw.abstractclasses.NpsMemory;
-import moc.spn.sbil.lellaw.kyc.model.KycState;
-import moc.spn.sbil.lellaw.userdetail.UserDetail;
+import com.example.library.lib.UserDetail;
+import com.example.library.lib.abstractclasses.NpsMemory;
 
-import static moc.spn.sbil.lellaw.utils.Constants.KEY_AGENT_ID;
-import static moc.spn.sbil.lellaw.utils.Constants.KEY_BALANCE;
-import static moc.spn.sbil.lellaw.utils.Constants.KEY_COMMISSION;
-import static moc.spn.sbil.lellaw.utils.Constants.KEY_EMAIL_ID;
-import static moc.spn.sbil.lellaw.utils.Constants.KEY_ID;
-import static moc.spn.sbil.lellaw.utils.Constants.KEY_KYC;
-import static moc.spn.sbil.lellaw.utils.Constants.KEY_LOGO;
-import static moc.spn.sbil.lellaw.utils.Constants.KEY_MOBILE;
-import static moc.spn.sbil.lellaw.utils.Constants.KEY_NAME;
-import static moc.spn.sbil.lellaw.utils.Constants.KEY_REWARD;
 
 public class UserSession extends NpsMemory {
     public UserSession(Context context) {
@@ -33,13 +33,13 @@ public class UserSession extends NpsMemory {
         putString(KEY_BALANCE, userDetail.available_balance);
         putString(KEY_REWARD, userDetail.reward_point);
         putString(KEY_COMMISSION, userDetail.commission);
-    }
-    public void setKycState(KycState kycState){
-        putString(KEY_KYC,kycState.toString());
-    }
-    public void setUserBalance(String amount){
-        putString(KEY_BALANCE, amount);
-    }
+//    }
+//    public void setKycState(KycState kycState){
+//        putString(KEY_KYC,kycState.toString());
+//    }
+//    public void setUserBalance(String amount){
+//        putString(KEY_BALANCE, amount);
+  }
     public String getId(){
         return getString(KEY_ID);
     }
@@ -47,6 +47,7 @@ public class UserSession extends NpsMemory {
     public String getUserName(){
         return getString(KEY_NAME);
     }
+
 
     public String getAgentId(){
         return getString(KEY_AGENT_ID);
@@ -60,9 +61,9 @@ public class UserSession extends NpsMemory {
     public String getUserImageUrl(){
         return getString(KEY_LOGO);
     }
-    public KycState getKycState(){
-        return KycState.getKycState(getString(KEY_KYC));
-    }
+//    public KycState getKycState(){
+//        return KycState.getKycState(getString(KEY_KYC));
+//    }
     public String getUserBalance(){
         return "Rs. "+getString(KEY_BALANCE);
     }

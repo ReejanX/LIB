@@ -1,12 +1,14 @@
-package moc.spn.sbil.lellaw.session;
+package com.example.library.lib.session;
+
+
+import static com.example.library.lib.utils.Constants.KEY_ENCRYPTION;
+import static com.example.library.lib.utils.Constants.KEY_TOKEN;
 
 import android.content.Context;
 
-import moc.spn.sbil.lellaw.abstractclasses.NpsMemory;
-import moc.spn.sbil.lellaw.auth.model.User;
+import com.example.library.lib.abstractclasses.NpsMemory;
+import com.example.library.lib.model.User;
 
-import static moc.spn.sbil.lellaw.utils.Constants.KEY_ENCRYPTION;
-import static moc.spn.sbil.lellaw.utils.Constants.KEY_TOKEN;
 
 public final class AuthSession extends NpsMemory {
 

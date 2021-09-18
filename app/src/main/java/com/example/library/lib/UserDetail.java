@@ -1,9 +1,10 @@
-package moc.spn.sbil.lellaw.userdetail;
+package com.example.library.lib;
+
+import com.example.library.lib.abstractclasses.NpsModel;
+import com.example.library.lib.abstractclasses.ResponseData;
 
 import java.util.List;
 
-import moc.spn.sbil.lellaw.abstractclasses.NpsModel;
-import moc.spn.sbil.lellaw.abstractclasses.ResponseData;
 
 public class UserDetail extends NpsModel {
     public List<Data> data;

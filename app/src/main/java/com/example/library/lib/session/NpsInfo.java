@@ -1,13 +1,14 @@
-package moc.spn.sbil.lellaw.session;
+package com.example.library.lib.session;
+
+import static com.example.library.lib.utils.Constants.KEY_PASSWORD;
+import static com.example.library.lib.utils.Constants.KEY_PRIVATE;
+import static com.example.library.lib.utils.Constants.KEY_URL;
+import static com.example.library.lib.utils.Constants.KEY_USER;
 
 import android.content.Context;
 
-import moc.spn.sbil.lellaw.abstractclasses.NpsMemory;
+import com.example.library.lib.abstractclasses.NpsMemory;
 
-import static moc.spn.sbil.lellaw.utils.Constants.KEY_PASSWORD;
-import static moc.spn.sbil.lellaw.utils.Constants.KEY_PRIVATE;
-import static moc.spn.sbil.lellaw.utils.Constants.KEY_URL;
-import static moc.spn.sbil.lellaw.utils.Constants.KEY_USER;
 
 public final class NpsInfo extends NpsMemory {
     private Builder mBuilder;

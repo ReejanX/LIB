@@ -1,13 +1,12 @@
-package moc.spn.sbil.lellaw.auth.model;
+package com.example.library.lib.auth.model;
 
 
-import android.os.Parcel;
-
+import com.example.library.lib.abstractclasses.NpsModel;
+import com.example.library.lib.abstractclasses.ResponseData;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import moc.spn.sbil.lellaw.abstractclasses.NpsModel;
-import moc.spn.sbil.lellaw.abstractclasses.ResponseData;
+
 
 public class User extends NpsModel {
     private static final String TAG = "User";

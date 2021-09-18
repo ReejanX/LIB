@@ -5,6 +5,7 @@ import android.content.Context;
 import android.util.Base64;
 import android.util.Log;
 
+import com.example.library.lib.session.AuthSession;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 

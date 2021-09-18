@@ -7,8 +7,12 @@ import com.example.library.lib.api.NpsApi;
 import com.example.library.lib.api.NpsApiClient;
 import com.example.library.lib.api.NpsApiInterface;
 import com.example.library.lib.api.NpsError;
+import com.example.library.lib.api.NpsInfo;
 import com.example.library.lib.api.NpsThrowable;
 import com.example.library.lib.api.OnNpsApiResult;
+import com.example.library.lib.session.AuthSession;
+import com.example.library.lib.session.BioSession;
+import com.example.library.lib.utils.JavaAes;
 import com.example.library.lib.utils.NpsData;
 import com.example.library.lib.utils.Utils;
 
@@ -44,25 +48,25 @@ public abstract class NpsRepository {
         return createRequestBody(convertToBase64(payload));
     }
 
-//    protected RequestBody generateImageSignature(String payload) {
-//        return createRequestBody(generateSignature(payload));
-//    }
-//
-//    protected NpsData generatePayload(String functionName, String jsonPayload) {
-//        return new NpsData(functionName, convertToBase64(jsonPayload), generateSignature(jsonPayload));
-//    }
+    protected RequestBody generateImageSignature(String payload) {
+        return createRequestBody(generateSignature(payload));
+    }
+
+    protected NpsData generatePayload(String functionName, String jsonPayload) {
+        return new NpsData(functionName, convertToBase64(jsonPayload), generateSignature(jsonPayload));
+    }
 
     private String filter(String mData) {
         return mData.replace("\n", "").replace(" ", "");
     }
-//
-//    private String generateSignature(String jsonPayload) {
-//        String key = new AuthSession(context).getKeyEncryption();
-//        if (key == null) {
-//            key = new NpsInfo(context).getPrivateKey();
-//        }
-//        return filter(JavaAes.doEncryptedAES(jsonPayload, key));
-//    }
+
+    private String generateSignature(String jsonPayload) {
+        String key = new AuthSession(context).getKeyEncryption();
+        if (key == null) {
+            key = new NpsInfo(context).getPrivateKey();
+        }
+        return filter(JavaAes.doEncryptedAES(jsonPayload, key));
+    }
 
 
     private String convertToBase64(String str) {
@@ -78,21 +82,21 @@ public abstract class NpsRepository {
         api.callAPI(call, apiResult);
     }
 
-//    protected JSONObject getRequestObject(String username) {
-//        JSONObject reader = new JSONObject();
-//        try {
-//            if (username == null) {
-//                username = new BioSession(getContext()).getUsername();
-//            }
-//            reader.put("user_login_id", username);
-//            reader.put("created_platform", "android");
-//        } catch (JSONException ignored) {
-//
-//        }
-//        return reader;
-//    }
-//
-//    protected JSONObject getRequestObject() {
-//        return getRequestObject(null);
-//    }
+    protected JSONObject getRequestObject(String username) {
+        JSONObject reader = new JSONObject();
+        try {
+            if (username == null) {
+                username = new BioSession(getContext()).getUsername();
+            }
+            reader.put("user_login_id", username);
+            reader.put("created_platform", "android");
+        } catch (JSONException ignored) {
+
+        }
+        return reader;
+    }
+
+    protected JSONObject getRequestObject() {
+        return getRequestObject(null);
+    }
 }

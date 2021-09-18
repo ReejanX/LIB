@@ -1,19 +1,15 @@
-package moc.spn.sbil.lellaw.auth;
+package com.example.library.lib.auth;
 
 import android.app.Application;
 
 import androidx.annotation.NonNull;
 
-import moc.spn.sbil.lellaw.abstractclasses.NpsViewModel;
-import moc.spn.sbil.lellaw.api.OnNpsApiResult;
-import moc.spn.sbil.lellaw.auth.model.Logout;
-import moc.spn.sbil.lellaw.auth.model.Resend;
-import moc.spn.sbil.lellaw.auth.model.Reset;
-import moc.spn.sbil.lellaw.auth.model.SetPassword;
-import moc.spn.sbil.lellaw.auth.model.User;
-import moc.spn.sbil.lellaw.change.model.ChangePassword;
-import moc.spn.sbil.lellaw.change.model.ChangePin;
-import moc.spn.sbil.lellaw.utils.WalletLayout;
+import com.example.library.lib.abstractclasses.NpsViewModel;
+import com.example.library.lib.api.OnNpsApiResult;
+import com.example.library.lib.auth.model.Reset;
+import com.example.library.lib.model.User;
+import com.example.library.lib.utils.WalletLayout;
+
 
 public class UserViewModel extends NpsViewModel {
 
@@ -58,9 +54,9 @@ public class UserViewModel extends NpsViewModel {
         return userRepoImpl.isValid();
     }
 
-    public void resetPassword(OnNpsApiResult<Reset> apiResult) {
-        userRepoImpl.resetPassword(apiResult);
-    }
+//    public void resetPassword(OnNpsApiResult<Reset> apiResult) {
+//        userRepoImpl.resetPassword(apiResult);
+//    }
 
 
     /**
@@ -71,10 +67,10 @@ public class UserViewModel extends NpsViewModel {
     public Boolean isValidVerifyCode() {
         return userRepoImpl.isValid();
     }
-
-    public void verifyCode(String username, String code, OnNpsApiResult<Reset> apiResult) {
-        userRepoImpl.verifyCode(username, code, apiResult);
-    }
+//
+//    public void verifyCode(String username, String code, OnNpsApiResult<Reset> apiResult) {
+//        userRepoImpl.verifyCode(username, code, apiResult);
+//    }
 
 
     /**
@@ -91,30 +87,30 @@ public class UserViewModel extends NpsViewModel {
     public Boolean isValidPassword() {
         return userRepoImpl.isValid();
     }
+//
+//    public void password(String username, OnNpsApiResult<SetPassword> apiResult) {
+//        userRepoImpl.setPassword(username, apiResult);
+//    }
 
-    public void password(String username, OnNpsApiResult<SetPassword> apiResult) {
-        userRepoImpl.setPassword(username, apiResult);
-    }
-
-    /**
-     * resendOTP
-     *
-     * @param id
-     * @param newPassword
-     * @param confirmPassword
-     * @param apiResult
-     */
-    public void setVerificationPassword(String id, String newPassword, String confirmPassword, OnNpsApiResult<SetPassword> apiResult) {
-        userRepoImpl.userSetVerifiedPassword(id, newPassword, confirmPassword, apiResult);
-    }
+//    /**
+//     * resendOTP
+//     *
+//     * @param id
+//     * @param newPassword
+//     * @param confirmPassword
+//     * @param apiResult
+//     */
+//    public void setVerificationPassword(String id, String newPassword, String confirmPassword, OnNpsApiResult<SetPassword> apiResult) {
+//        userRepoImpl.userSetVerifiedPassword(id, newPassword, confirmPassword, apiResult);
+//    }
 
     public Boolean isValidResendOtp() {
         return userRepoImpl.isValid();
     }
-
-    public void resendOtp(String username, OnNpsApiResult<Resend> apiResult) {
-        userRepoImpl.resendOtp(username, apiResult);
-    }
+//
+//    public void resendOtp(String username, OnNpsApiResult<Resend> apiResult) {
+//        userRepoImpl.resendOtp(username, apiResult);
+//    }
 
     /**
      * set forceful change login password
@@ -131,10 +127,10 @@ public class UserViewModel extends NpsViewModel {
     public Boolean isValidChangeLoginPassword() {
         return userRepoImpl.isValid();
     }
-
-    public void changeLoginPassword(String username, OnNpsApiResult<ChangePassword> apiResult) {
-        userRepoImpl.changeLoginPassword(username, apiResult);
-    }
+//
+//    public void changeLoginPassword(String username, OnNpsApiResult<ChangePassword> apiResult) {
+//        userRepoImpl.changeLoginPassword(username, apiResult);
+//    }
 
 
     /**
@@ -150,12 +146,12 @@ public class UserViewModel extends NpsViewModel {
     }
 
     public Boolean isValidChangeLoginPin() {
-        return userRepoImpl.isValid();
-    }
-
-    public void changeLoginPin(String username, OnNpsApiResult<ChangePin> apiResult) {
-        userRepoImpl.changeLoginPin(username, apiResult);
-    }
+        return userRepoImpl.isValid();}
+}
+//
+//    public void changeLoginPin(String username, OnNpsApiResult<ChangePin> apiResult) {
+//        userRepoImpl.changeLoginPin(username, apiResult);
+//    }
 
 
     /**
@@ -163,7 +159,7 @@ public class UserViewModel extends NpsViewModel {
      *
      * @param apiResult
      */
-    public void logout(OnNpsApiResult<Logout> apiResult) {
-        userRepoImpl.logout(apiResult);
-    }
-}
+//    public void logout(OnNpsApiResult<Logout> apiResult) {
+//        userRepoImpl.logout(apiResult);
+//    }
+//}
