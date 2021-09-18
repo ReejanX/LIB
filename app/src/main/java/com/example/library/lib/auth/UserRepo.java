@@ -4,8 +4,6 @@ import android.content.Context;
 
 import com.example.library.lib.abstractclasses.NpsRepository;
 import com.example.library.lib.api.OnNpsApiResult;
-import com.example.library.lib.auth.model.Logout;
-import com.example.library.lib.auth.model.Reset;
 import com.example.library.lib.model.User;
 import com.example.library.lib.utils.NpsData;
 import com.example.library.lib.utils.Utils;

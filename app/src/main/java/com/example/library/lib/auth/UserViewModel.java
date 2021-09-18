@@ -3,15 +3,16 @@ package com.example.library.lib.auth;
 import android.app.Application;
 
 import androidx.annotation.NonNull;
+import androidx.lifecycle.ViewModel;
 
 import com.example.library.lib.abstractclasses.NpsViewModel;
 import com.example.library.lib.api.OnNpsApiResult;
-import com.example.library.lib.auth.model.Reset;
+
 import com.example.library.lib.model.User;
 import com.example.library.lib.utils.WalletLayout;
 
 
-public class UserViewModel extends NpsViewModel {
+public class UserViewModel extends NpsViewModel{
 
     private final UserRepoImpl userRepoImpl;
 
@@ -50,9 +51,9 @@ public class UserViewModel extends NpsViewModel {
         userRepoImpl.setResetPassword(usernameLayout);
     }
 
-    public Boolean isValidResetPassword() {
-        return userRepoImpl.isValid();
-    }
+//    public Boolean isValidResetPassword() {
+//        return userRepoImpl.isValid();
+//    }
 
 //    public void resetPassword(OnNpsApiResult<Reset> apiResult) {
 //        userRepoImpl.resetPassword(apiResult);
@@ -64,9 +65,9 @@ public class UserViewModel extends NpsViewModel {
      *
      * @return
      */
-    public Boolean isValidVerifyCode() {
-        return userRepoImpl.isValid();
-    }
+//    public Boolean isValidVerifyCode() {
+//        return userRepoImpl.isValid();
+//    }
 //
 //    public void verifyCode(String username, String code, OnNpsApiResult<Reset> apiResult) {
 //        userRepoImpl.verifyCode(username, code, apiResult);
@@ -84,9 +85,9 @@ public class UserViewModel extends NpsViewModel {
         userRepoImpl.setPasswordTextField(newPassword, confirmPassword);
     }
 
-    public Boolean isValidPassword() {
-        return userRepoImpl.isValid();
-    }
+//    public Boolean isValidPassword() {
+//        return userRepoImpl.isValid();
+//    }
 //
 //    public void password(String username, OnNpsApiResult<SetPassword> apiResult) {
 //        userRepoImpl.setPassword(username, apiResult);
@@ -104,9 +105,9 @@ public class UserViewModel extends NpsViewModel {
 //        userRepoImpl.userSetVerifiedPassword(id, newPassword, confirmPassword, apiResult);
 //    }
 
-    public Boolean isValidResendOtp() {
-        return userRepoImpl.isValid();
-    }
+//    public Boolean isValidResendOtp() {
+//        return userRepoImpl.isValid();
+//    }
 //
 //    public void resendOtp(String username, OnNpsApiResult<Resend> apiResult) {
 //        userRepoImpl.resendOtp(username, apiResult);
@@ -124,9 +125,9 @@ public class UserViewModel extends NpsViewModel {
         userRepoImpl.setLoginChangePasswordTextField(oldPasswordLayout, newPasswordLayout, confirmPasswordLayout);
     }
 
-    public Boolean isValidChangeLoginPassword() {
-        return userRepoImpl.isValid();
-    }
+//    public Boolean isValidChangeLoginPassword() {
+//        return userRepoImpl.isValid();
+//    }
 //
 //    public void changeLoginPassword(String username, OnNpsApiResult<ChangePassword> apiResult) {
 //        userRepoImpl.changeLoginPassword(username, apiResult);
@@ -144,10 +145,9 @@ public class UserViewModel extends NpsViewModel {
     public <T extends WalletLayout> void setChangeLoginPin(T oldPinLayout, T newPinLayout, T confirmPinLayout) {
         userRepoImpl.setLoginChangePinTextField(oldPinLayout, newPinLayout, confirmPinLayout);
     }
-
-    public Boolean isValidChangeLoginPin() {
-        return userRepoImpl.isValid();}
 }
+
+//    public Boolean isValidChangeLoginPin() { return userRepoImpl.isValid();}}
 //
 //    public void changeLoginPin(String username, OnNpsApiResult<ChangePin> apiResult) {
 //        userRepoImpl.changeLoginPin(username, apiResult);

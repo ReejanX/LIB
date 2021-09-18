@@ -4,8 +4,6 @@ import android.content.Context;
 
 import com.example.library.lib.abstractclasses.RepositoryImpl;
 import com.example.library.lib.api.OnNpsApiResult;
-import com.example.library.lib.auth.model.Logout;
-import com.example.library.lib.auth.model.Reset;
 import com.example.library.lib.model.User;
 import com.example.library.lib.session.AuthSession;
 import com.example.library.lib.session.BioSession;
