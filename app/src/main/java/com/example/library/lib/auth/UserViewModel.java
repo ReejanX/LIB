@@ -36,8 +36,13 @@ public class UserViewModel extends NpsViewModel{
         return userRepoImpl.isValid();
     }
 
-    public void login(OnNpsApiResult<User> apiResult) {
-        userRepoImpl.login(apiResult);
+
+    //TODO 2: here this is the actual fucntion we use in fragment or activity
+    // So this function has to take username and password as input along with the apiResult interface
+    // Apiresult is an interface that will let us know the results after FINISHING api hit
+
+    public void login(String username, String password, OnNpsApiResult<User> apiResult) {
+        userRepoImpl.login(username, password, apiResult);
     }
 
 

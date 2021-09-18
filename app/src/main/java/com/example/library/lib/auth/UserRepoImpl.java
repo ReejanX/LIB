@@ -143,9 +143,10 @@ public class UserRepoImpl extends RepositoryImpl {
      *
      * @param apiResult
      */
-    protected void login(OnNpsApiResult<User> apiResult) {
-        final String username = getText(usernameRef);
-        final String password = getText(passwordRef);
+    //TODO 1 : this func will take our data from viewModel,
+    //So i will add username and password as Strings before the interface : apiResult
+    //
+    protected void login(String username,String  password, OnNpsApiResult<User> apiResult) {
         userLogin(username, password, apiResult);
     }
 
