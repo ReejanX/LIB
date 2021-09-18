@@ -1,13 +1,12 @@
-package com.example.library.lib.api;
-
-import static com.example.library.lib.utils.Constants.KEY_ENCRYPTION;
-import static com.example.library.lib.utils.Constants.KEY_TOKEN;
+package moc.spn.sbil.lellaw.session;
 
 import android.content.Context;
 
-import com.example.library.lib.abstractclasses.NpsMemory;
-import com.example.library.lib.model.User;
+import moc.spn.sbil.lellaw.abstractclasses.NpsMemory;
+import moc.spn.sbil.lellaw.auth.model.User;
 
+import static moc.spn.sbil.lellaw.utils.Constants.KEY_ENCRYPTION;
+import static moc.spn.sbil.lellaw.utils.Constants.KEY_TOKEN;
 
 public final class AuthSession extends NpsMemory {
 
@@ -41,7 +40,7 @@ public final class AuthSession extends NpsMemory {
     }
 
     public void logout(){
-//        new UserSession(getContext()).clear();
+        new UserSession(getContext()).clear();
         remove(KEY_TOKEN);
         remove(KEY_ENCRYPTION);
         clear();
